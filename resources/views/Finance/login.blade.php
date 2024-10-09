@@ -2,15 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/libs/css/style.css">
-    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+
+    @include('Layout.head')
+
     <style>
     html,
     body {
@@ -18,6 +12,7 @@
     }
 
     body {
+        background-color: #faf7f0;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
@@ -40,19 +35,25 @@
 
         <div class="splash-container2">
             <div class="card1">
-            <div class="card-body">
+            <div class="card-body1">
                 <div class="form-group"></div>
-                <div><a href="/"></a><span class="splash-header">Login</span></div>
-                <div><span class="splash-description">Doesn't have an account? <a href="/signup" class="a-underline">Sign up</a></span></div>
+                <div><span class="splash-header1">Login</span></div>
+                <div><span class="splash-description1">Doesn't have an account? <a href="/signup" class="a-underline">Sign up</a></span></div>
                 <form method="POST" action="/login">
                     @csrf
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input class="form-control form-control-lg" name="email" id="Email" type="text" placeholder="example123@gmail.com" autocomplete="off">
+                        <input class="form-control form-control-lg" name="email" id="email" type="text" placeholder="Email" autocomplete="off" :value="{{ old('email') }}">
+                        @error('email')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input class="form-control form-control-lg" name="password" id="password" type="password" placeholder="Must be 8+ characters">
+                        <input class="form-control form-control-lg" name="password" id="password" type="password" placeholder="Password">
+                        @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form-group1">
                         <label class="custom-control custom-checkbox">
@@ -62,7 +63,7 @@
                             <a href="forgot-password.html" class="a-underline"><span>Forgot Password</span></a>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-radius">Login</button>
+                    <button type="submit" class="btn btn-primary1 btn-lg btn-block btn-radius">Login</button>
                 </form>
                 <div class="form-group2">
                     <div class="splash-description mb text-center">or login with</div>

@@ -161,7 +161,7 @@ body {
     font-weight: normal;
     font-size: 14px;
     color: #71748d;
-    background-color: #faf7f0;
+    background-color: #fffffe;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -353,50 +353,14 @@ button.btn-radius:hover {
     border: 1px solid #8d6c4d;
 }
 
+button.btn-radius:active {
+    border-radius: 8px;
+    background-color: #8d6c4d;
+    border: 1px solid #8d6c4d;
+}
+
 address {}
 
-.form-group .form-group1 {
-    margin: 12px 0px ;
-}
-
-.form-group1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form-group2{
-    margin: 17px 0px;
-}
-
-/* additional_design */
-
-.mb{
-    position: relative;
-    margin-top: 10px;
-}
-
-.mb::before{
-    content:" ";
-    height: 1px;
-    width: 100px;
-    background: #71748d;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 35%;
-}
-
-.mb::after{
-    content:" ";
-    height: 1px;
-    width: 100px;
-    background: #71748d;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 35%;
-}
 
 .form-control-lg {
     padding: 12px;
@@ -1277,6 +1241,10 @@ Top Header
 
 .dashboard-header {}
 
+.nav-logo{
+
+}
+
 .dashboard-header .navbar {
     padding: 0px;
     border-bottom: 1px solid #e6e6f2;
@@ -1754,8 +1722,9 @@ Left Navigation Sidebar
 }
 
 .nav-left-sidebar .nav-link i {
+    width: 15px;
     font-size: 14px;
-    margin-right: 9px;
+    margin-right: 12px;
     text-align: center;
     vertical-align: middle;
     line-height: 16px;
@@ -2008,9 +1977,43 @@ Container / Wrapper
 }
 
 
-/*-----------------------
-Splash Container / Wrapper
--------------------------*/
+/*-----------------------Splash Container / Wrapper-------------------------*/
+
+
+.splash-container .card-header {
+    padding: 20px;
+}
+
+.splash-description {
+    text-align: center;
+    display: block;
+    line-height: 20px;
+    font-size: 1rem;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+.splash-title {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.splash-container .card-footer-item {
+    padding: 12px 28px;
+}
+
+/* ---splash additional--- */
+
+.splash-description1 {
+    text-align: start;
+    display: block;
+    line-height: 20px;
+    font-size: 1rem;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
 
 .splash-container1 {
     width: auto;
@@ -2026,6 +2029,14 @@ Splash Container / Wrapper
     justify-content: start;
 }
 
+.splash-header1{
+    text-align: start;
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+
 .page-logo{
     margin-top: 10px;
 }
@@ -2035,6 +2046,7 @@ Splash Container / Wrapper
     width: auto;
 }
 
+/* -----main body----- */
 
 .main-content1{
     margin: 0;
@@ -2046,37 +2058,111 @@ Splash Container / Wrapper
     gap: 0rem 2rem;
 }
 
-.splash-container .card-header {
-    padding: 20px;
+
+
+
+/* ------card body----- */
+
+.card1 {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    width: 27rem;
+    padding: 28px 40px;
+    border: 1px solid #c2956bb1;
+    border-radius: 12px;
+    -webkit-box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
+    /* margin-left: 40px; */
 }
 
-.splash-description {
-    text-align: start;
+.card-body1 {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    /* padding: 35px 40px;
+    border-radius: 20px; */
+}
+
+
+/* ------form group------ */
+
+.form-group{
+    margin: 12px 0px ;
+}
+
+.form-group1{
+    margin: 12px 0px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group2{
+    margin: 17px 0px;
+}
+
+.mb{
+    position: relative;
+    margin-top: 10px;
+}
+
+.mb::before{
+    content:" ";
+    height: 1px;
+    width: 100px;
+    background: #71748d;
     display: block;
-    line-height: 20px;
-    font-size: 1rem;
-    margin-top: 5px;
-    padding-bottom: 10px;
+    position: absolute;
+    left: 0;
+    top: 35%;
 }
 
-
-.splash-header{
-    text-align: start;
+.mb::after{
+    content:" ";
+    height: 1px;
+    width: 100px;
+    background: #71748d;
     display: block;
-    font-size: 2rem;
-    margin-bottom: 5px;
-    letter-spacing: px;
+    position: absolute;
+    right: 0;
+    top: 35%;
 }
 
-.splash-title {
-    text-align: center;
-    display: block;
-    font-size: 14px;
-    font-weight: 300;
+/* ---additional Button--- */
+
+.btn-primary1 {
+    color: #fff;
+    background-color: #c2956b;
+    border-color: #ac845f;
 }
 
-.splash-container .card-footer-item {
-    padding: 12px 28px;
+.btn-primary1:hover {
+    color: #fff;
+    background-color: #c2956b;
+    border-color: #ac845f;
+}
+
+.btn-primary1.focus,
+.btn-primary1:focus {
+    color: #fff;
+    background-color: #c2956b;
+    border-color: #ac845f;
+    box-shadow: 0 0 0 1px rgb(130, 91, 50);
+}
+
+.btn-primary1:not(:disabled):not(.disabled).active:focus,
+.btn-primary1:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary1.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(130, 91, 50);
+}
+
+.btn-primary1:not(:disabled):not(.disabled).active,
+.btn-primary1:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #c2956b;
+    border-color: #ac845f;
 }
 
 
@@ -3296,26 +3382,10 @@ btn-link
 
 .card {
     margin-bottom: 30px;
-    width: 30rem;
-    padding: 28px 40px;
     border: none;
-    border-radius: 12px;
     -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     -moz-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
-}
-
-.card1 {
-    margin-bottom: 30px;
-    background-color: #ffffff;
-    width: 26rem;
-    padding: 28px 40px;
-    border: 1px solid #c2956bb1;
-    border-radius: 12px;
-    -webkit-box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
-    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
-    /* margin-left: 40px; */
 }
 
 .card-header {
@@ -3330,9 +3400,6 @@ btn-link
 }
 
 .card-body {
-    width: auto;
-    padding: 0;
-    margin: 0;
     /* padding: 35px 40px;
     border-radius: 20px; */
 }
@@ -6919,7 +6986,7 @@ Media Query
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width:992px) {
-    
+
     .page-logo, .logo-img{
         display: block;
         width: 20rem;
